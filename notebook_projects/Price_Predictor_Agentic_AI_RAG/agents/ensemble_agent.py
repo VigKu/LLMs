@@ -40,8 +40,8 @@ class EnsembleAgent(Agent):
             'Specialist': [specialist],
             'Frontier': [frontier],
             'RandomForest': [random_forest],
-            'Min': [min(specialist, frontier, random_forest)],
-            'Max': [max(specialist, frontier, random_forest)],
+            #'Min': [min(specialist, frontier, random_forest)],
+            #'Max': [max(specialist, frontier, random_forest)],
         })
         y = max(0, self.model.predict(X)[0])
         self.log(f"Ensemble Agent complete - returning ${y:.2f}")
