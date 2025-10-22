@@ -3,7 +3,7 @@ import sys
 import logging
 import json
 from typing import List, Optional
-from twilio.rest import Client
+#from twilio.rest import Client
 from dotenv import load_dotenv
 import chromadb
 from agents.planning_agent import PlanningAgent
@@ -62,7 +62,7 @@ class DealAgentFramework:
         return []
 
     def write_memory(self) -> None:
-        data = [opportunity.dict() for opportunity in self.memory]
+        data = [opportunity.model_dump() for opportunity in self.memory]
         with open(self.MEMORY_FILENAME, "w") as file:
             json.dump(data, file, indent=2)
 

@@ -154,8 +154,9 @@ class App:
         
             ui.load(run_with_logging, inputs=[log_data], outputs=[log_data, logs, opportunities_dataframe])
 
-            timer = gr.Timer(value=300, active=True)
-            timer.tick(run_with_logging, inputs=[log_data], outputs=[log_data, logs, opportunities_dataframe])
+            ### Run at interval
+            #timer = gr.Timer(value=300, active=True)
+            #timer.tick(run_with_logging, inputs=[log_data], outputs=[log_data, logs, opportunities_dataframe])
 
             opportunities_dataframe.select(do_select)
         

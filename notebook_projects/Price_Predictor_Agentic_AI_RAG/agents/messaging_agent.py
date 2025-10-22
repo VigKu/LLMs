@@ -22,13 +22,13 @@ class MessagingAgent(Agent):
         whichever is specified in the constants
         """
         self.log(f"Messaging Agent is initializing")
-        if DO_TEXT:
-            account_sid = os.getenv('TWILIO_ACCOUNT_SID', 'your-sid-if-not-using-env')
-            auth_token = os.getenv('TWILIO_AUTH_TOKEN', 'your-auth-if-not-using-env')
-            self.me_from = os.getenv('TWILIO_FROM', 'your-phone-number-if-not-using-env')
-            self.me_to = os.getenv('MY_PHONE_NUMBER', 'your-phone-number-if-not-using-env')
-            # self.client = Client(account_sid, auth_token)
-            self.log("Messaging Agent has initialized Twilio")
+        # if DO_TEXT:
+        #     account_sid = os.getenv('TWILIO_ACCOUNT_SID', 'your-sid-if-not-using-env')
+        #     auth_token = os.getenv('TWILIO_AUTH_TOKEN', 'your-auth-if-not-using-env')
+        #     self.me_from = os.getenv('TWILIO_FROM', 'your-phone-number-if-not-using-env')
+        #     self.me_to = os.getenv('MY_PHONE_NUMBER', 'your-phone-number-if-not-using-env')
+        #     # self.client = Client(account_sid, auth_token)
+        #     self.log("Messaging Agent has initialized Twilio")
         if DO_PUSH:
             self.pushover_user = os.getenv('PUSHOVER_USER', 'your-pushover-user-if-not-using-env')
             self.pushover_token = os.getenv('PUSHOVER_TOKEN', 'your-pushover-user-if-not-using-env')

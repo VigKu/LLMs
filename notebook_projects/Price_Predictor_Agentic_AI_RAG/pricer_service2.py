@@ -2,7 +2,6 @@ import modal
 from modal import App, Volume, Image
 
 # Constants
-
 GPU = "T4"
 BASE_MODEL = "meta-llama/Llama-3.2-1B" #"meta-llama/Meta-Llama-3.1-8B"
 PROJECT_NAME = "pricer"
